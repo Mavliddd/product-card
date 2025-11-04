@@ -13,12 +13,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
     <div class="background"></div>
-    <h1 class="title-product">Выбери свой продукт</h1>
+    <h1 id="output-title" class="title-product">Выбери свой продукт</h1>
     <ul class="products-list">
+        <button id="change-color-all-card" class="btn-style">Сменить цвет карточек</button>
+        <button id="change-color-first-card" class="btn-style">Сменить цвет первой карточки</button>
+        <button id="open-google" class="btn-style">Открыть Google</button>
+        <button id="output-console-log" class="btn-style">Вывести в консоль</button>
+        <button id="color-switching" class="red-background orange-background btn-style">Переключение цветов</button>
       <li class="card-list__item">
-        <img
-          src="/image/muss.svg" alt="Увлажняющий мусс" width="290" height="245"/>
+   
+        <img src="/image/muss.svg" alt="Увлажняющий мусс" width="290" height="245"/>
         <span class="description">для нормальной кожи</span>
         <h3 class="name">Увлажняющий мусс</h3>
         <p class="product-properties">
@@ -116,5 +122,6 @@
         </div>
       </li>
     </ul>
+  <script src="main.js"></script>
   </body>
 </html>
