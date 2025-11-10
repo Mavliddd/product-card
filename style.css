@@ -105,14 +105,16 @@
   margin-left: 14px;
 }
 
+.bg-red {
+  color: red;
+}
 
-.orange-background {
+
+.bg-orange {
   color: orange
 }
 
-.red-background {
-  color: red;
-}
+
 
 .btn-style {
   display: inline-block;	

@@ -1,22 +1,19 @@
 // Покраска всех карточек
 
-const cardListItem = document.querySelectorAll(".card-list__item");
-const changeColorAllCardButton = document.querySelector(
-  "#change-color-all-card"
-);
+const productCards = document.querySelectorAll(".card-list__item");
+const changeColorAllCardButton = document.querySelector("#change-color-all-card");
 const greenColorHash = "#00FF00";
-const yellowColorHash = "#FFFF00";
 
 changeColorAllCardButton.addEventListener("click", () => {
-  cardListItem.forEach((card) => (card.style.backgroundColor = greenColorHash));
+  productCards.forEach((card) => (card.style.backgroundColor = greenColorHash));
 });
 
 // покраска первой карточки
 
+const yellowColorHash = "#FFFF00";
+
 const firstProductCard = document.querySelector(".card-list__item");
-const changeColorFirstCardButton = document.querySelector(
-  "#change-color-first-card"
-);
+const changeColorFirstCardButton = document.querySelector("#change-color-first-card");
 
 changeColorFirstCardButton.addEventListener("click", () => {
   firstProductCard.style.backgroundColor = yellowColorHash;
@@ -50,24 +47,15 @@ function outputConsoleLog(message) {
 
 //вывод в консоль заголовка
 
-const OutputTitle = document.querySelector("#output-title");
+const OutputTitle = document.querySelector(".main-title");
 
-OutputTitle.addEventListener("mouseover", () =>
-  console.log(OutputTitle.textContent)
-);
+OutputTitle.addEventListener("mouseover", () => console.log(OutputTitle.textContent));
 
 // переключение цветов кнопки
 
-const changeColorButton = document.getElementById("color-switching");
+const toggleColorButton = document.getElementById("color-switching");
 
-changeColorButton.addEventListener("click", function () {
-  if (changeColorButton.classList.contains("red-background")) {
-    changeColorButton.classList.remove("red-background");
-    changeColorButton.classList.add("orange-background");
-  } else if (changeColorButton.classList.contains("orange-background")) {
-    changeColorButton.classList.remove("orange-background");
-    changeColorButton.classList.add("red-background");
-  } else {
-    changeColorButton.classList.add("red-background");
-  }
+toggleColorButton.addEventListener("click", function () {
+this.classList.toggle('bg-red');
+this.classList.toggle('bg-orange');
 });
