@@ -47,15 +47,15 @@ function outputConsoleLog(message) {
 
 //вывод в консоль заголовка
 
-const OutputTitle = document.querySelector(".main-title");
+const outputTitle = document.querySelector(".main-title");
 
-OutputTitle.addEventListener("mouseover", () => console.log(OutputTitle.textContent));
+outputTitle.addEventListener("mouseover", () => console.log(outputTitle.textContent));
 
 // переключение цветов кнопки
 
 const toggleColorButton = document.getElementById("color-switching");
 
-toggleColorButton.addEventListener("click", function () {
-this.classList.toggle('bg-red');
-this.classList.toggle('bg-orange');
+toggleColorButton.addEventListener("click", function() {
+
+  this.classList.toggle('bg-orange');
 });
