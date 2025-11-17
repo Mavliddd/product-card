@@ -1,29 +1,29 @@
 
 // Функция принимающая два параметра : город и температура воздуха.
 
-function knowWeather (city, temperature) {
+function showWeatherInfo (city, temperature) {
     console.log(`"Сейчас в ${city} температура - ${temperature} градусов по Цельсию"`)
 }
-knowWeather('Махачкале','25')
+showWeatherInfo('Махачкале','25')
 
 
 
 
 //  Функция для сравнения выбранного числа со скоростью звука
 
-const SPEEDSOUND = 343;
+const SPEED_SOUND = 343;
 
-function VerifySpeed(speed) {
-  if(speed > SPEEDSOUND) {
+function checkSpeed(speed) {
+  if(speed > SPEED_SOUND) {
     console.log('Сверхзвуковая скорость');
-  } else if(speed === SPEEDSOUND){
+  } else if(speed === SPEED_SOUND){
     console.log('Скорость звука');
   } else {
     console.log('Дозвуковая скорость');
   }
 }
 
-VerifySpeed(500);
+checkSpeed(500);
 
 
 
@@ -34,7 +34,7 @@ const product = 'Телефон';
 
 const productPrice = 1500;
 
-function buyMobile(budget) {
+function buyProduct(budget) {
   if (budget >= productPrice) {
     console.log(`${product} приобретен. Спасибо за покупку!`);
   } else {
@@ -43,7 +43,7 @@ function buyMobile(budget) {
   }
 }
 
-buyMobile(1100);
+buyProduct(1100);
 
 
 
