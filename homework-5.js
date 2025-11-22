@@ -1,7 +1,7 @@
 
 // Функция принимающая два параметра : город и температура воздуха.
 
-function showWeatherInfo (city, temperature) {
+function showWeatherInfo(city, temperature) {
     console.log(`"Сейчас в ${city} температура - ${temperature} градусов по Цельсию"`)
 }
 showWeatherInfo('Махачкале','25')
@@ -14,9 +14,9 @@ showWeatherInfo('Махачкале','25')
 const SPEED_SOUND = 343;
 
 function checkSpeed(speed) {
-  if(speed > SPEED_SOUND) {
+  if (speed > SPEED_SOUND) {
     console.log('Сверхзвуковая скорость');
-  } else if(speed === SPEED_SOUND){
+  } else if (speed === SPEED_SOUND) {
     console.log('Скорость звука');
   } else {
     console.log('Дозвуковая скорость');
