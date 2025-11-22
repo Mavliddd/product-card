@@ -33,9 +33,9 @@ console.log(myCar.owner.name);
 
 //5
 
-function addMaxSpeed(car){
-    if(!('maxSpeed' in car)){
-    car.maxSpeed = 200
+function addMaxSpeed(car) {
+    if (!('maxSpeed' in car)) {
+      car.maxSpeed = 200
     }
 }
 
@@ -44,7 +44,7 @@ console.log(myCar.maxSpeed);
 
 //6
 
-function showProperty (myCar, propertyName){
+function showProperty(myCar, propertyName) {
     console.log(myCar[propertyName])
 }
 
@@ -128,11 +128,11 @@ console.log(allBooks);
 
 //10
 
-function  addIsRare(allBooks){
+function addIsRare(allBooks){
     return allBooks.map(book => {
         return {
             ...book,
-            isRare:book.year > 2000
+            isRare: book.year > 2000
         }
     })
 }
