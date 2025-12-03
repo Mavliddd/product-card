@@ -7,9 +7,7 @@ import { userComments } from "./comments.js";
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-const filtered = numbers.filter( (number) => {
-  return number >= 5;
-});
+const filtered = numbers.filter(number => number >= 5)
 
 console.log(filtered)
 
@@ -17,11 +15,11 @@ console.log(filtered)
 
 /* Создать массив строк, относящихся к любой сущности (название фильмов/книг, кухонные приборы, мебель и т.д.), проверить, есть ли в массиве какая-то определенная сущность.*/
 
-const fruts = ['ананас', 'киви', 'манго', 'памелло', 'грейпфрут']
+const fruits = ['ананас', 'киви', 'манго', 'памелло', 'грейпфрут']
 
-const hasBanan = fruts.includes('банан')
+const hasBanan = fruits.includes('банан')
 
-const hasMango = fruts.includes('манго')
+const hasMango = fruits.includes('манго')
 
 console.log(hasBanan)
 
@@ -31,23 +29,22 @@ console.log(hasMango)
 
 /* Написать функцию, которая аргументом будет принимать массив и изменять его порядок на противоположный ("переворачивать") . Два вышеуказанных массива с помощью этой функции перевернуть. */ 
 
-function reversyNumbers(number) {
-    number.reverse()
+function reverseNumbers(arr) {
+  return [...arr].reverse()
 }
 
-reversyNumbers(numbers)
-
-console.log(numbers)
+console.log(reverseNumbers(numbers))
 
 
 
-function reversyFruts(fruts) {
-    fruts.reverse()
+
+
+
+function reversyFruits(arr) {
+  return [...arr].reverse()
 }
 
-reversyFruts(fruts)
-
-console.log(fruts)
+console.log(reversyFruits(fruits))
 
 
 /* Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com" */
@@ -71,12 +68,10 @@ console.log(commentsWithPostId);
 
 /* Перебрать массив, что бы объекты состояли только из айди и имени */
 
-const userNamesWithIds = userComments.map(user => {
-  return {
-    id: user.id,
-    name: user.name
-  };
-});
+const userNamesWithIds = userComments.map(user => ({
+  id: user.id,
+  name: user.name
+}));
 
 console.log(userNamesWithIds)
 
@@ -95,9 +90,9 @@ console.log(validatedComments)
 
 //11. Почитать про метод массива reduce. Используя его, вывести массив почт и провернуть тоже самое с помощью метода map
 
-const commentAuthorEmails =  userComments.reduce((acc, user) => {
+const commentAuthorEmails = userComments.reduce((acc, user) => {
   return [...acc, user.email]
-}, [])
+},[])
 
 console.log(commentAuthorEmails)
 
