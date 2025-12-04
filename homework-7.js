@@ -29,22 +29,16 @@ console.log(hasMango)
 
 /* Написать функцию, которая аргументом будет принимать массив и изменять его порядок на противоположный ("переворачивать") . Два вышеуказанных массива с помощью этой функции перевернуть. */ 
 
-function reverseNumbers(arr) {
+function reverseArray(arr) {
   return [...arr].reverse()
 }
 
-console.log(reverseNumbers(numbers))
+const reverseNumbers = reverseArray(numbers)
+const reverseFruits = reverseArray(fruits)
 
+console.log(reverseNumbers)
+console.log(reverseFruits)
 
-
-
-
-
-function reversyFruits(arr) {
-  return [...arr].reverse()
-}
-
-console.log(reversyFruits(fruits))
 
 
 /* Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com" */
