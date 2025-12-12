@@ -7,28 +7,22 @@ const productItem = document.getElementById('productItem')
 
 
 function outputProductCards(productToShow) {
-
-productToShow.forEach(product => {
+  productToShow.forEach(product => {
     const productClone = productListTemplate.content.cloneNode(true);
     productClone.querySelector('.product-img').src = `/image/${product.image}.svg`
     productClone.querySelector('.description').textContent = product.description
     productClone.querySelector('.name').textContent = product.name
     productClone.querySelector('.product-properties').textContent = product.properties
-    productClone.querySelector('.product-composition').innerHTML = product.composition.map(item => `<li>${item}</li>`).join("")
+    productClone.querySelector('.composition-list').innerHTML = product.composition.map(item => `<li>${item}</li>`).join("")
     productClone.querySelector('.cost-product').innerHTML = product.price + '&#8381'
     productItem.appendChild(productClone)
-})
+  })
 }
 
 
 // 4. Используя метод .reduce(), получить строку, которая состоит из названий продуктовых карточек, разделенных точкой с запятой
 
-const namesList = products.reduce((acc, product, index) => {
-    if (index === 0) {
-        return product.name 
-    }
-        return acc + '; ' + product.name
-}, '')
+const namesList = products.reduce((acc, product, index) => index === 0 ? product.name : acc + '; ' + product.name,'')
 
 console.log(namesList)
 
