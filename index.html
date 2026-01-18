@@ -122,10 +122,76 @@
         </div>
       </li>
     </ul>
+
+<button id="open-modal">Регистрация</button>
+<div class="overlay">
+  <div class="modal">
+    <span class="close">&times;</span>
+    <h2>Регистрация</h2>
+    <form id="registrationForm">
+      <label for="firstName">Имя:</label>
+      <input type="text" id="firstName" name="firstName" required placeholder="Введите ваше имя">
+      <label for="lastName">Фамилия:</label>
+      <input type="text" id="lastName" name="lastName" required placeholder="Введите вашу фамилию">
+      <label for="birthDate">Дата рождения:</label>
+      <input type="date" id="birthDate" name="birthDate" required>
+      <label for="login">Логин:</label>
+      <input type="text" id="login" name="login" required minlength="3" placeholder="Минимум 3 символа">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required minlength="6" placeholder="Минимум 6 символов">
+      <label for="confirmPassword">Повторите пароль:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Повторите пароль">
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+  </div>
+</div>
+
+<footer class="footer-container">
+  <div class="grup-container">
+    <div class="footer__brand">
+      <div class="footer_logo">Product Cards</div>
+      <div class="footer_description">У нас самые лучшие продукты для кожи!</div>
+      <div>
+        <a href="#">
+          <img src="/image/TG-icon.png" alt="иконка телеграмм">
+          <img src="/image/VK-icon.png" alt="иконка вконтакте" class="vk">
+        </a>
+      </div>
+    </div>
+    <div class="footer__subscribe">
+      <div class="footer__subscribe-title">Подпишись на наши акции:</div>
+      <form class="input-button">
+        <input type="email" placeholder="Введите Email" class="subscribe-inp" required>
+        <button type="submit" class="subscribe-btn">| Подписаться</button>
+      </form>
+    </div>
+    <nav class="footer__nav">
+      <div class="footer__nav-title">Быстрые ссылки</div>
+      <a class="footer__nav-link"  href="#">Главная</a>
+      <a class="footer__nav-link" href="#">Магазин</a>
+      <a class="footer__nav-link" href="#">Контакты</a>
+    </nav>
+  </div>
+</footer>
+   
+<div class="footer__bottom">
+  <div class="footer__divider"></div>
+  www.product-cards.com© all right reserve
+</div>
+       
+      
   <script src="main.js"></script>
+<<<<<<< Updated upstream
   <script src="homework-5.js"></script>
   <script src="homework-6.js"></script>
   <script type="module" src="homework-7.js"></script>
+=======
+<!--  <script src="homework-5.js"></script>-->
+<!--  <script src="homework-6.js"></script>-->
+ <!-- <script type="module" src="homework-7.js"></script>-->
+  <!--<script type="module" src="homework-8.js"></script>-->
+  <script src="homework-9.js"></script>
+>>>>>>> Stashed changes
   </body>
 </html>
 
