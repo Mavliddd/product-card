@@ -1,14 +1,14 @@
-/** {
+* {
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: Montserrat, Courier;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 18px;
   color: #515076;
-  font-weight: 400;
-} 
-  */
+}
 
 .title-product {
   font-size: 70px;
@@ -110,12 +110,9 @@
   color: red;
 }
 
-
 .bg-orange {
   color: orange
 }
-
-
 
 .btn-style {
   display: inline-block;	
@@ -132,13 +129,10 @@
   height:110px ;
 }
 
-
 .footer-container {
-  background-color:#3A3A3A ;
-  align-items: flex-start;
-  padding: 20px;
-  width: 1500px;
-  height: 477px;
+ padding: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .footer__nav {
@@ -156,7 +150,6 @@
   flex-direction: column;
   text-align: left;
   color: #f7f7fa;
-  font-weight: 800;
   gap: 25px;
 }
 
@@ -165,25 +158,26 @@
   color: #f7f7fa;
 }
 
-
 .grup-container {
-  width: 1269px;
-  height: 147px;
+   width: 100%;
+  max-width: 1269px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   color: #f7f7fa;
 }
 
-
 .footer__bottom {
-  font-size: 18px;
+  max-width: 1269px;
+  margin: 300px auto 0;
+  padding: 15px 20px;
   text-align: center;
   color: #f7f7fa;
-  background-color: #3A3A3A;
-  padding: 15px 0;
-  width: 100%;
+  font-size: 18px;
+  position: relative;
+  left: 110px;
 }
-
 
 .footer__divider {
   width: 66px;
@@ -191,7 +185,6 @@
   background-color: #ffffff;
   margin: 0 auto 15px auto;
 }
-
 
 .subscribe-btn {
   border: none;
@@ -206,7 +199,6 @@
   justify-content: center;
 }
 
-
 .input-button {
   display: flex;
   border: 1px solid #666;
@@ -216,8 +208,7 @@
   overflow: hidden;
 }
 
-
-.subscribe-inp {
+.subscribe-input {
   border: none;
   flex: 1;
   outline: none;
@@ -227,54 +218,48 @@
   color: #333;
 }
 
-
-.footer__logo {
+.footer_logo {
   font-family: Montserrat;
   font-weight: 800;
-  font-style: ExtraBold;
   font-size: 28px;
   line-height: 154%;
   letter-spacing: 0%;
   text-transform: capitalize;
 }
 
-
 .footer__description {
   font-family: Montserrat;
   font-weight: 400;
-  font-style: Regular;
   font-size: 18px;
   line-height: 154%;
   letter-spacing: 0%;
-  text-transform: capitalize;
 }
-
 
 .footer__subscribe-title {
   font-family: Montserrat;
   font-weight: 400;
-  font-style: Regular;
   font-size: 24px;
   line-height: 100%;
   letter-spacing: 0%;
   margin-bottom: 20px;
 }
 
+.site-footer {
+  width: 100%;
+  background-color: #3A3A3A;
+}
 
 .footer__nav-title {
   font-family: Montserrat;
   font-weight: 500;
-  font-style: Medium;
   font-size: 20px;
   line-height: 100%;
   letter-spacing: 0%;
 }
 
-
 .footer__nav-link {
   font-family: Montserrat;
   font-weight: 400;
-  font-style: Regular;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -282,11 +267,9 @@
   color: #f7f7fa;
 }
 
-
 .vk {
   margin-left: 20px;
 }
-
 
 .overlay {
   position: fixed;
@@ -301,22 +284,19 @@
   z-index: 1000;
 }
 
-
 .modal {
   background: white;
   padding: 30px;
   border-radius: 12px;
   width: 90%;
-  max-width: 500px;
+  max-width: 570px;
   position: relative;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-
 .overlay.modal-showed {
   display: flex;
 }
-
 
 .close {
   position: absolute;
@@ -327,7 +307,6 @@
   cursor: pointer;
   font-weight: bold;
 }
-
 
 .close:hover {
   color: #333;

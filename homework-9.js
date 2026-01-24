@@ -1,28 +1,29 @@
 // 4 добавлена логика к форме
 
-const form1 = document.querySelector('.input-button')
+const subscriptionForm = document.querySelector('.input-button')
 
-form1.addEventListener('submit', function(event) {
+subscriptionForm.addEventListener('submit', function(event) {
   event.preventDefault();
   
-const email = form1.querySelector('.subscribe-inp').value
+const email = subscriptionForm.querySelector('.subscribe-input').value
 
 console.log({ email: email})
 }) 
 
 // 5 добавление модального окна
+
 let user = null;
 
 const overlay = document.querySelector('.overlay')
 const openBtn = document.getElementById('open-modal')
 const closeBtn = document.querySelector('.close')
-const form = document.getElementById('registrationForm'); 
+const form = document.getElementById('form'); 
 
-openBtn.addEventListener('click', function() {
+openBtn.addEventListener('click', () => {
   overlay.classList.add('modal-showed')
 })
 
-closeBtn.addEventListener('click', function() {
+closeBtn.addEventListener('click', () => {
   overlay.classList.remove('modal-showed')
 })
 
@@ -42,7 +43,6 @@ form.addEventListener('submit', function(event) {
     return;
   }
 
-
 const formData = new FormData(form);
 const data = Object.fromEntries(formData.entries());
 
@@ -53,13 +53,9 @@ const data = Object.fromEntries(formData.entries());
 
 
 user = {
-  firstName: data.firstName,
-  lastName: data.lastName,
-  birthDate: data.birthDate,
-  login: data.login,
-  password: data.password,
+  ...data,
   createdOn: new Date()
-  };
+};
 
 console.log('✅ Регистрация успешна! Данные пользователя:', user);
 
