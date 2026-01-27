@@ -17,7 +17,7 @@ let user = null;
 const overlay = document.querySelector('.overlay')
 const openBtn = document.getElementById('open-modal')
 const closeBtn = document.querySelector('.close')
-const form = document.getElementById('form'); 
+const registrationForm = document.getElementById('registrationForm'); 
 
 openBtn.addEventListener('click', () => {
   overlay.classList.add('modal-showed')
@@ -35,15 +35,15 @@ overlay.addEventListener('click', function(event) {
 
 // 6 работа формы регистрации
 
-form.addEventListener('submit', function(event) {
+registrationForm.addEventListener('submit', function(event) {
   event.preventDefault();
 
-  if (!form.checkValidity()) {
+  if (!registrationForm.checkValidity()) {
     alert('Пожалуйста, заполните все поля правильно.');
     return;
   }
 
-const formData = new FormData(form);
+const formData = new FormData(registrationForm);
 const data = Object.fromEntries(formData.entries());
 
   if (data.password !== data.confirmPassword) {
