@@ -1,61 +1,73 @@
-// Покраска всех карточек
+import Watch from "./Watch.js";
+import Rolex  from "./Rolex.js";
+import Orient from "./Orient.js";
+import Casio from "./Casio.js";
+import Modal from "./Modal.js";
+import Form from "./Form.js";
 
-const productCards = document.querySelectorAll(".card-list__item");
-const changeColorAllCardButton = document.querySelector("#change-color-all-card");
-const greenColorHash = "#00FF00";
+// 3 Создать структуру на ваш выбор
 
-changeColorAllCardButton.addEventListener("click", () => {
-  productCards.forEach((card) => (card.style.backgroundColor = greenColorHash));
-});
+document.addEventListener('DOMContentLoaded', function() {
 
-// покраска первой карточки
+  const rolex = new Rolex('Submariner', 12000, 'Нержавеющая сталь', 300);
+  rolex.showInfo();
+  rolex.showStatus();
+  rolex.start();
+  console.log('');
 
-const yellowColorHash = "#FFFF00";
 
-const firstProductCard = document.querySelector(".card-list__item");
-const changeColorFirstCardButton = document.querySelector("#change-color-first-card");
+  const orient = new Orient('Bambino', 250, 'Автоматический');
+  orient.showInfo();
+  orient.showStatus();
+  orient.windMechanism();
+  orient.start();
+  console.log('');
 
-changeColorFirstCardButton.addEventListener("click", () => {
-  firstProductCard.style.backgroundColor = yellowColorHash;
-});
 
-// открыть Google
+  const casio = new Casio('F-91W', 25,);
+  casio.showInfo();
+  casio.showStatus();
+  console.log('');
 
-const openGoogleButton = document.querySelector("#open-google");
+// 4. Создать файл Modal.js и в нем создать  класс для модального окна
 
-openGoogleButton.addEventListener("click", openGoogle);
+  const registrationModal = new Modal('registrationModal');
+  const openModalBtn = document.getElementById('open-modal');
 
-function openGoogle() {
-  const answer = confirm("Вы действительно хотите открыть Google?");
-  if (answer === true) {
-    window.open("https://google.com");
-  } else {
-    return;
-  }
-}
+  openModalBtn.addEventListener('click', () => {
+    registrationModal.open();
+  });
 
-// вывод лога и сообщения
+  console.log('Модальное окно создано!');
+  console.log('Открыто сейчас?', registrationModal.isOpen());
 
-const showAlertAndLogButton = document.querySelector("#output-console-log");
+//5. Создать файл Form.js и реализовать класс для формы под названием Form
+  
+  const registrationForm = new Form('registrationForm');
+  registrationForm.form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-showAlertAndLogButton.addEventListener("click", () => outputConsoleLog("ДЗ №4"));
+    if (!registrationForm.isValid()) {
+      alert('Пожалуйста, заполните все поля правильно.');
+      return;
+    }
 
-function outputConsoleLog(message) {
-  alert("message");
-  console.log(message);
-}
+    if (!registrationForm.validatePasswords()) {
+      alert('Пароли не совпадают!');
+      return;
+    }
 
-//вывод в консоль заголовка
+    const formData = registrationForm.getValues();
+    const userData = {
+      ...formData,
+      createdOn: new Date()
+    };
 
-const outputTitle = document.querySelector(".main-title");
+    console.log('Регистрация успешна!');
+    console.log('Данные пользователя:', userData);
 
-outputTitle.addEventListener("mouseover", () => console.log(outputTitle.textContent));
 
-// переключение цветов кнопки
-
-const toggleColorButton = document.getElementById("color-switching");
-
-toggleColorButton.addEventListener("click", function() {
-
-  this.classList.toggle('bg-orange');
+    registrationModal.close();
+    registrationForm.reset();
+  });
 });
