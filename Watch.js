@@ -1,9 +1,11 @@
 export default class Watch {
-  constructor(brand, model, price) {
+  constructor(brand, model, price, statusMessage, detailsMessage) {
     this.brand = brand;
     this.model = model;
     this.price = price;
     this.isRunning = false;
+    this.statusMessage = statusMessage;
+    this.detailsMessage = detailsMessage;
   }
 
 start() {
@@ -19,5 +21,10 @@ stop() {
 showInfo() {
     const status = this.isRunning ? 'идут' : 'остановлены';
     console.log(`${this.brand} ${this.model} | Цена: $${this.price} | Состояние: ${status}`);
+  }
+
+showStatus() {
+    console.log(`Статус: ${this.statusMessage}`);
+    console.log(this.detailsMessage);
   }
 }

@@ -52,7 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    if (!registrationForm.validatePasswords()) {
+  const values = registrationForm.getValues();
+    if (values.password && values.confirmPassword && values.password !==values.confirmPassword) {
       alert('Пароли не совпадают!');
       return;
     }

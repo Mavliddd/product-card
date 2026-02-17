@@ -22,11 +22,7 @@ export default class Form {
     this.form.reset();
   }
 
-  validatePasswords() {
-    const values = this.getValues();
-    const passwordsMatch = values.password === values.confirmPassword;
-
-    console.log(' Пароли совпадают?', passwordsMatch);
-    return passwordsMatch;
+  validate() {
+    return true;
   }
 }
