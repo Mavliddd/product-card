@@ -19,13 +19,14 @@ export default class Drink {
   setTemperature(newTemperature) {
     this.#temperature = newTemperature;
   }
+
   #makeDrink() {
     console.log(`Приготовление напитка: ${this.getInfo()}`);
   }
 
   serve() {
     this.#makeDrink();
-    console.log(`Примите ваш заказ: ${this.name}`);
+    console.log(`Ваш ${this.name} готов!`);
   }
 }
 

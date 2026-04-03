@@ -11,5 +11,6 @@ export default class Cafe {
   orderDrink(drink) {
     console.log('Ваш заказ принят. Ожидайте.');
     drink.serve();
+    console.log(`Примите ваш заказ: ${drink.name}`);
   }
 }
